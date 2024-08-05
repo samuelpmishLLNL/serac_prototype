@@ -6,41 +6,33 @@ Format: problem statement (impact of problem)
 
  
 
-\- no reverse mode in Functional (requires us to form sparse matrices, which is expensive) 
+- no reverse mode in Functional (requires us to form sparse matrices, which is expensive) 
 
-\- FBar/Bbar doesn't really work (can’t analyze near-incompressible problems) 
+- FBar/Bbar doesn't really work (can’t analyze near-incompressible problems) 
 
-\- Functional has hardcoded "graph" (hard to modify code) 
+- Functional has hardcoded "graph" (hard to modify code) 
 
-\- can't differentiate w.r.t. internal variables (plasticity models aren’t truly differentiable) 
+- can't differentiate w.r.t. internal variables (plasticity models aren’t truly differentiable) 
 
-\- John Bowen's implementation of GPU kernels (initial RAJA implementation isn’t usable) 
+- John Bowen's implementation of GPU kernels (initial RAJA implementation isn’t usable) 
 
-\- unreliable build (hurts productivity and creates bad user experience) 
+- unreliable build (hurts productivity and creates bad user experience) 
 
-\- users are confused by dual number requirements (hurts user experience, counterintuitive) 
+- users are confused by dual number requirements (hurts user experience, counterintuitive) 
 
-\- inconsistent conventions for ownership, argument passing in physics modules (confusing to users) 
+- inconsistent conventions for ownership, argument passing in physics modules (confusing to users) 
 
-\- physics modules don’t have clear goal, both legacy input-deck analyses and research tool (makes the design clumsy, since it’s being pulled in different directions) 
+- physics modules don’t have clear goal, both legacy input-deck analyses and research tool (makes the design clumsy, since it’s being pulled in different directions) 
 
-\- state-machine physics module design makes it hard to understand/test (easier to introduce bugs and harder to fix them, also harder to do AD because of side effects in the state machine) 
-
- 
-
-​        . 
-
-​        . 
-
-​        . 
+- state-machine physics module design makes it hard to understand/test (easier to introduce bugs and harder to fix them, also harder to do AD because of side effects in the state machine) 
 
  
+...
 
  <div style="page-break-after: always; break-after: page;"></div>
 
 ## Serac 1.0 design goals: 
 
- 
 
 maximize (1.0 * performance - 0.1 * complexity) 
 
@@ -48,19 +40,19 @@ maximize (1.0 * performance - 0.1 * complexity)
 
 the following requirements are satisfied: 
 
-  \- flexible 
+  - flexible 
 
-  \- intuitive 
+  - intuitive 
 
-  \- differentiable (for now, only reverse-mode at "high" level) 
+  - differentiable (for now, only reverse-mode at "high" level) 
 
-  \- material support (especially with hysteresis) 
+  - material support (especially with hysteresis) 
 
-  \- GPU implementation (by ~ Jan 2025) 
+  - GPU implementation (by ~ Jan 2025) 
 
-   \- Hex8 Implicit Nonlinear Elasticity (medium-sized) problem 
+    - Hex8 Implicit Nonlinear Elasticity (medium-sized) problem 
 
-  \- reliable dependency resolution and build 
+  - reliable dependency resolution and build 
 
   
 
@@ -249,9 +241,12 @@ Mock Interface:
 
 ### Build System / Software Vending
 
+
+TODO
  
 
 
+ <div style="page-break-after: always; break-after: page;"></div>
 
 ## User's Input file
 
